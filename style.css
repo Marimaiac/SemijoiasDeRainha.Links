@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif; /* Fonte para títulos */
+}
+body {
+    
+    font-family: Arial, sans-serif;
+    background: #9a7b4f;
+}
+
+/* Container */
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+/* Card */
+.card {
+    padding: 40px;
+    border-radius: 35px;
+    text-align: center;
+    width: 120%;
+    max-width: 800px;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    background: rgba(237, 230, 230, 0.8);
+}
+.card video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    opacity: 100%;
+    inset: 0;
+
+}
+
+.card > *:not(video) {
+    position: relative;
+    z-index: 2;
+}
+
+/* Perfil */
+.profile img {
+    width: 150px;
+    border-radius: 50%;
+    border-top: 20px;
+    margin-top: 80px;
+}
+
+.profile p {
+    margin-top: 35px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #b27409;
+    font-family: "Cinzel", serif;
+    font-weight: 500;
+}
+
+.presentation p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #583a06;
+    font-family: "Cinzel", serif;
+    font-weight: 500;
+}
+
+
+/* 📱 Mobile */
+@media (max-width: 1000px) {
+    .card {
+        width: 95%;
+        padding: 25px;
+    }
+}
+
+/* 💻 Desktop */
+@media (min-width: 700px) {
+    #container {
+        gap: 40px; /* espaço pra futuro segundo card */
+    }
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    margin-top: 450px;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    text-decoration: none;
+    color:#343333dc;
+    cursor: pointer;
+    
+}
+
+li {
+    font-size: 22px;
+    font-weight: bold;
+    color: #b27409;
+    font-family: "Cinzel", serif;
+    font-weight: 500;
+    
+}
+
+li a {
+    display:inline-block;
+    text-decoration: none;
+    color: #b27409;
+    padding: 25px 25px;
+    width: 90%;
+    border-radius: 20px;
+    background: #fffcf3;
+    border: 1px solid rgba(0, 0, 0, 0.103);
+    
+}
+
+ul li a:hover {
+    background: rgba(245, 208, 111, 0.15);
+    transition: 0.3s ease-in-out;
+    border: 1px solid #b27409;
+    transform: scale(1.025);
+    opacity: 0.9;
+}
+
+.footer {
+    margin-top: 200px;
+    font-size: 14px;
+    color: #583a06;
+    font-family: "Cinzel", serif;
+    font-weight: 400;
+}
