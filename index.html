@@ -12,7 +12,7 @@
 <body>
     <div id="container">
         <div class="card">
-            <video src="./assets/Video2.mp4" autoplay muted loop playsinline webkit-playsinline ></video>
+            <video src="./assets/video2.0.mp4" autoplay muted loop playsinline webkit-playsinline ></video>
 
             <div class="profile">
                 <img src="./assets/logoSemijoiasDeRainha.png" alt="Logo da Semijoias de Rainha - Perfil">
@@ -36,6 +36,15 @@
         </div>
          
     </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const video = document.querySelector('.card video');
+    video.muted = true; // garante mute
+    video.play().catch(() => {
+        console.log('Autoplay bloqueado, aguardando interação mínima.');
+    });
+});
+</script>
     
 </body>
 </html>
